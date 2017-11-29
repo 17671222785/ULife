@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.andywang.ulife"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'cn.bmob.android:bmob-sdk:3.5.0'
+    //黄油刀
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //侧滑菜单
+    implementation 'com.android.support:design:26.1.0'
+    //图片圆形化
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    //多选图片
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.0'
+    //ProgressHud进度条
+    implementation 'com.kaopiz:kprogresshud:1.1.0'
+    //数据库操作
+    implementation 'org.litepal.android:core:1.4.1'
+    //网络请求
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    //GSON用于解析JSON数据
+    implementation 'com.google.code.gson:gson:2.8.2'
+    //Glide用于加载和显示图片
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    //轮播图
+    implementation 'com.youth.banner:banner:1.4.10'
+}

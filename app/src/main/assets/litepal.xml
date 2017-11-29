@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <!-- 数据库的名字 -->
+    <dbname value="ULife" />
+
+    <!-- 数据库的版本号 -->
+    <version value="1" />
+
+    <!-- 数据库的映射模型（数据库表） -->
+    <list>
+        <!-- 数据库的映射模型的地址（数据库表结构） -->
+        <mapping class="com.andywang.ulife.db.Province"/>
+        <mapping class="com.andywang.ulife.db.City"/>
+        <mapping class="com.andywang.ulife.db.County"/>
+    </list>
+</litepal>
