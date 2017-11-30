@@ -75,7 +75,7 @@ public class Utility {
      * @param cityId
      * @return
      */
-    private static boolean handleCountyResponse(String response, int cityId){
+    public static boolean handleCountyResponse(String response, int cityId){
         if (!TextUtils.isEmpty(response)) {
             try {
                 JSONArray allCounties = new JSONArray(response);
