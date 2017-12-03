@@ -18,10 +18,10 @@ public class HttpUtil {
      * @param address 请求地址
      * @param callback 注册的回调来处理服务器响应
      */
-    public static void sendOkHttpRequest(String address, okhttp3.Callback callback){
+    public static void sendOkHttpRequest(String address, okhttp3.Callback callback) {
         OkHttpClient client = new OkHttpClient();
-        Request request = new  Request.Builder().url(address).build();
-        client.newCall(request).equals(callback);
+        Request request = new Request.Builder().url(address).build();
+        client.newCall(request).enqueue(callback);
     }
 
 

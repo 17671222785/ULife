@@ -10,6 +10,8 @@ import android.text.TextUtils;
 import com.andywang.ulife.db.City;
 import com.andywang.ulife.db.County;
 import com.andywang.ulife.db.Province;
+import com.andywang.ulife.gson.Weather;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -70,7 +72,7 @@ public class Utility {
     }
 
     /**
-     * 解析和处理服务器返回的市级数据
+     * 解析和处理服务器返回的县级数据
      * @param response
      * @param cityId
      * @return
@@ -94,6 +96,21 @@ public class Utility {
         return false;
     }
 
+
+    /**
+     * 将返回的JSON数据解析成Weather实体类
+     */
+    public static Weather handleWeatherResponse(String response) {
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
+            String weatherContent = jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(weatherContent, Weather.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 }
 

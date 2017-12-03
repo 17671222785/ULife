@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_main_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal">
+
+    <RadioGroup
+        android:id="@+id/rg_main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_main_news"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/selector_main_item_news"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingTop="8dp"
+            android:text="新闻"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rb_main_weather"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/selector_main_item_weather"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingTop="8dp"
+            android:text="天气"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rb_main_calendar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/selector_main_item_calendar"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingTop="8dp"
+            android:text="日历"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rb_main_me"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/selector_main_item_me"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingTop="8dp"
+            android:text="我"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+</LinearLayout>

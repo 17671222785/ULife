@@ -3,89 +3,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.andywang.ulife.ui.MainActivity">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vp_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/view_main_line"
-        >
-    </android.support.v4.view.ViewPager>
-
-    <View
-        android:id="@+id/view_main_line"
-        android:layout_above="@id/rg_main_bottom"
-        android:background="#aaaaaa"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"/>
-
-    <RadioGroup
+    <!--Toolbar 所需布局-->
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rg_main_bottom"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        >
-        <RadioButton
-            android:id="@+id/rb_main_news"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawablePadding="2dp"
-            android:drawableTop="@drawable/selector_main_item_news"
-            android:gravity="center"
-            android:paddingBottom="3dp"
-            android:paddingTop="8dp"
-            android:text="新闻"
-            android:textSize="12sp"
-            />
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <RadioButton
-            android:id="@+id/rb_main_weather"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawablePadding="2dp"
-            android:drawableTop="@drawable/selector_main_item_weather"
-            android:gravity="center"
-            android:paddingBottom="3dp"
-            android:paddingTop="8dp"
-            android:text="天气"
-            android:textSize="12sp"
-            />
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#F5F5F5"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:theme="@style/ToolbarTheme">
 
-        <RadioButton
-            android:id="@+id/rb_main_calendar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawablePadding="2dp"
-            android:drawableTop="@drawable/selector_main_item_calendar"
-            android:gravity="center"
-            android:paddingBottom="3dp"
-            android:paddingTop="8dp"
-            android:text="日历"
-            android:textSize="12sp"
-            />
+            <ImageView
+                android:id="@+id/iv_left"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="1dp"
+                android:src="@drawable/ic_blue_back" />
 
-        <RadioButton
-            android:id="@+id/rb_main_me"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawablePadding="2dp"
-            android:drawableTop="@drawable/selector_main_item_me"
-            android:gravity="center"
-            android:paddingBottom="3dp"
-            android:paddingTop="8dp"
-            android:text="我"
-            android:textSize="12sp"
-            />
-    </RadioGroup>
+            <TextView
+                android:id="@+id/tv_toolbar_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text=""
+                android:textColor="#449AFD"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tv_title_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="title"
+                android:textColor="#141414"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnRight"
+                style="@style/Widget.AppCompat.ActionButton.Overflow"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="18dp"
+                android:gravity="right"
+                android:textColor="#007AFF"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <!--fragment布局-->
+    <include layout="@layout/include_main_content"/>
+
 
 </RelativeLayout>

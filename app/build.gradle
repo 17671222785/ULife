@@ -6,17 +6,21 @@ android {
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.andywang.ulife"
-        minSdkVersion 17
+        minSdkVersion 21
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
     }
 }
 
@@ -29,8 +33,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    implementation 'com.android.support:recyclerview-v7:26.1.0'
-    compile 'cn.bmob.android:bmob-sdk:3.5.0'
     //黄油刀
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
@@ -51,5 +53,5 @@ dependencies {
     //Glide用于加载和显示图片
     implementation 'com.github.bumptech.glide:glide:3.7.0'
     //轮播图
-    implementation 'com.youth.banner:banner:1.4.10'
+    //implementation 'com.youth.banner:banner:1.4.10'
 }
