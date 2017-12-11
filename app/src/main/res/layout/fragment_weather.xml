@@ -49,13 +49,13 @@
 
         </android.support.v4.widget.SwipeRefreshLayout>
 
-        <fragment
-            android:id="@+id/choose_area_fragment"
-            android:name="com.andywang.ulife.view.ChooseAreaFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            />
+        <!--<fragment-->
+            <!--android:id="@+id/choose_area_fragment"-->
+            <!--android:name="com.andywang.ulife.view.ChooseAreaFragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_gravity="start"-->
+            <!--/>-->
 
     </android.support.v4.widget.DrawerLayout>
 

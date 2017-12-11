@@ -19,6 +19,7 @@ import com.andywang.ulife.R;
 import com.andywang.ulife.view.CalendarFragment;
 import com.andywang.ulife.view.MeFragment;
 import com.andywang.ulife.view.NewsFragment;
+import com.andywang.ulife.view.NoScrollViewPager;
 import com.andywang.ulife.view.WeatherFragment;
 
 import java.util.ArrayList;
@@ -44,13 +45,14 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.rg_main_bottom)
     RadioGroup rgMainBottom;
     @BindView(R.id.vp_main)
-    ViewPager vpMain;
+    NoScrollViewPager vpMain;
 
-    @BindViews({R.id.rb_main_news,R.id.rb_main_weather,R.id.rb_main_calendar,R.id.rb_main_me})
+    @BindViews({R.id.rb_main_news, R.id.rb_main_weather, R.id.rb_main_calendar, R.id.rb_main_me})
     List<RadioButton> radioButtonList;
     String[] titles = {"新闻", "天气", "日历", "我"};
     List<Integer> botPicList = new ArrayList<>();
     List<Fragment> fragments = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
         vpMain.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
-            public void onPageScrolled(int arg0,float arg1,int arg2) {
+            public void onPageScrolled(int arg0, float arg1, int arg2) {
                 //当页面在滑动的时候会调用此方法，在滑动被停止之前，此方法回一直被调用
                 //arg0 :当前页面，及你点击滑动的页面
                 //arg1:当前页面偏移的百分比

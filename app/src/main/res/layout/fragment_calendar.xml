@@ -1,13 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="日历" />
-</RelativeLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+    </android.support.v7.widget.Toolbar>
+
+    <include layout="@layout/top_week_title" />
+
+    <com.andywang.ulife.ui.ScrollLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.andywang.ulife.entity.calendar.views.MonthView
+                android:id="@+id/month_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <com.andywang.ulife.view.MyTextView
+                android:id="@+id/week_text"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:layout_width="70dp"
+                android:visibility="invisible"
+                android:textSize="12sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_height="18dp" />
+            <LinearLayout
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.andywang.ulife.entity.calendar.views.WeekView
+            android:id="@+id/week_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+    </com.andywang.ulife.ui.ScrollLayout>
+</LinearLayout>
