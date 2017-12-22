@@ -14,7 +14,8 @@ import java.util.Locale;
  * override all method.
  * Also you must add a judge of your language in branching statement of single case method{@link #getInstance()}
  *
- * @author AigeStudio 2015-03-26
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
  */
 public abstract class DPLManager {
     private static DPLManager sLanguage;

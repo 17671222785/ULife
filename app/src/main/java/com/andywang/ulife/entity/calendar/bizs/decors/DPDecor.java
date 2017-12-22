@@ -8,8 +8,8 @@ import android.graphics.Rect;
  * 月历装饰物类
  * Decor of Calendar
  *
- * @author AigeStudio 2015-07-22
- * @author AigeStudio 2015-10-29
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
  *         为每一个装饰物的绘制方法增加一个含参data的重载方法
  *         Add a parameter for each method.
  */

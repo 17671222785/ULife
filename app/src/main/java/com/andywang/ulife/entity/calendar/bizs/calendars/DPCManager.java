@@ -15,7 +15,8 @@ import java.util.Set;
  * 日期管理器
  * The manager of date picker.
  *
- * @author AigeStudio 2015-06-12
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
  */
 public final class DPCManager {
     private static final HashMap<Integer, HashMap<Integer, DPInfo[][]>> DATE_CACHE = new HashMap<>();

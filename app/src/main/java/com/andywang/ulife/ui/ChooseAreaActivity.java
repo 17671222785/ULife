@@ -32,6 +32,10 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
+/**
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
+ */
 public class ChooseAreaActivity extends AppCompatActivity {
 
     private static final String TAG = "ChooseAreaActivity";

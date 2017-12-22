@@ -4,6 +4,10 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+/**
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
+ */
 public class Weather {
 
     public String status;

@@ -10,7 +10,8 @@ import java.util.Set;
  * <p/>
  * Abstract class of Calendar
  *
- * @author AigeStudio 2015-06-15
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
  */
 public abstract class DPCalendar {
     protected final Calendar c = Calendar.getInstance();

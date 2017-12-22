@@ -41,7 +41,8 @@ import java.util.Map;
 /**
  * MonthView
  * 
- * @author AigeStudio 2015-06-29
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
  */
 public class MonthView extends View {
 	private final Region[][] monthRegionsFour = new Region[4][7];

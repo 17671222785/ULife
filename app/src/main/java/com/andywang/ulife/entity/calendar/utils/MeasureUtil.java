@@ -7,7 +7,8 @@ import android.content.Context;
  *
  * Util of measure.
  *
- * @author AigeStudio 2015-03-26
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
  */
 public final class MeasureUtil {
     private MeasureUtil(){}

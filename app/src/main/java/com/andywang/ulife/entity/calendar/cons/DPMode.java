@@ -6,7 +6,8 @@ package com.andywang.ulife.entity.calendar.cons;
  * Date select mode
  * Support SINGLE or MULTIPLE or Display only.
  *
- * @author AigeStudio 2015-07-02
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
  */
 public enum DPMode {
     SINGLE, MULTIPLE, NONE

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="title_name">@string/news</string>
+
+    <!-- 左侧侧滑菜单项标题内容-->
+    <string name="news">News</string>
+    <string name="weichat">Featured</string>
+    <string name="funny">Joke</string>
+    <string name="collection">Collection</string>
+    <string name="night">Nighmode</string>
+    <string name="about">About</string>
+    <string name="feedback">Feedback</string>
+    <string name="left_menu_bottom_settings">Settings</string>
+    <string name="left_menu_bottom_exit">Exit</string>
+
+    <!-- 设置界面的项目名和key-->
+    <string name="preference">Preferences</string>
+    <string name="internet">Network</string>
+    <string name="language">Language</string>
+    <string name="font_size">Font</string>
+    <string name="theme_change">Theme skinning</string>
+    <string name="night_mode">NightMode</string>
+    <string name="is_night_mode">Is currently in night mode</string>
+    <string name="is_light_mode">Is currently in day mode</string>
+    <string name="exit_be_sure">Exit confirmation</string>
+    <string name="exit_by_press_twice">Press twice to exit</string>
+    <string name="exit_dir">Direct exit</string>
+    <string name="no_pic_mode">No graph mode</string>
+    <string name="only_load_pic_wifi_useful">Load images only under Wifi</string>
+    <string name="load_pic_net_useful">There are pictures under the network loading</string>
+    <string name="clear_all_cache">Clear all caches</string>
+    <string name="reset_all_preference">Reset all settings</string>
+
+    <string-array name="font_size_title">
+        <item>Small</item>
+        <item>Normal</item>
+        <item>Large</item>
+    </string-array>
+
+    <string-array name="theme_title">
+        <item>red</item>
+        <item>blue</item>
+        <item>green</item>
+        <item>purple</item>
+        <item>black</item>
+    </string-array>
+
+    <string name="tip">Prompt</string>
+    <string name="tip_content">Are you sure you want to clear all the caches?</string>
+    <string name="certain">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="clearing">Clearing</string>
+    <string name="clear_success">Clear success!</string>
+    <string name="clear_failed">Clear failed</string>
+
+    <string name="warning">Warning</string>
+    <string name="init_settings_msg">Do you want to reset all settings?</string>
+
+    <!--网络数据加载错误时显示的内容 -->
+    <string name="reload">Reload</string>
+    <string name="empty">nothing</string>
+
+    <string name="author">Author</string>
+    <string name="copyright">Copyright</string>
+    <string name="application_brief">Application Brief</string>
+    <string name="current_version">Current Version</string>
+    <string name="share">Share</string>
+    <string name="author_github">Author GitHub</string>
+    <string name="github">https://github.com/PartingSoul</string>
+    <string name="mailbox">Mailbox</string>
+    <string name="data">Data</string>
+    <string name="data_summary">All data and images from the network, the copyright belongs to the original author.</string>
+    <string name="note">Note</string>
+    <string name="note_summary">This application is forbidden for commercial purposes.</string>
+    <string name="license">license</string>
+
+    <string name="message_clipboard">Information has been copied to the clipboard.</string>
+    <string name="is_collected">The news is collected.</string>
+    <string name="cancel_collected">The news is not collected.</string>
+
+    <string name="loading">loading...</string>
+
+    <string name="press_again">Press again to exit</string>
+</resources>

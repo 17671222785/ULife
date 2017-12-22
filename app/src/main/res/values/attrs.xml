@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="preferencetitletip">
+        <attr name="pretitle" format="string"/>
+        <attr name="pretip" format="string"/>
+    </declare-styleable>
+
+    <attr name="title_theme" format="color|reference"/>
+    <attr name="title_background_color" format="color|reference"/>
+    <attr name="theme_backgroundColor" format="color|reference"/>
+    <attr name="theme_textColor" format="color|reference"/>
+    <attr name="theme_leftMenu_bottom_style" format="color|reference|fraction"/>
+    <attr name="news_item_textSize" format="dimension"/>
+    <attr name="menu_item_textSize" format="dimension"/>
+    <attr name="setting_item_textSize" format="dimension"/>
+    <attr name="title_size" format="dimension|float|integer|reference"/>
+</resources>

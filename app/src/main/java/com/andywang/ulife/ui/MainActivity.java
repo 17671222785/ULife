@@ -29,6 +29,10 @@ import butterknife.BindView;
 import butterknife.BindViews;
 import butterknife.ButterKnife;
 
+/**
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
+ */
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.iv_left)

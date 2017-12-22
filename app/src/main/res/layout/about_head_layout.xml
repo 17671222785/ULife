@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/notify"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="?attr/colorPrimaryDark"
+        android:fitsSystemWindows="true"
+        android:orientation="horizontal"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/notify"
+        android:background="?attr/title_theme">
+
+        <ImageButton
+            android:id="@+id/back_forward"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/back"
+            android:background="#00000000"/>
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/back_forward"
+            android:text="@string/about"
+            android:textColor="@color/title_font_bc_wite"
+            android:textSize="25sp" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -16,7 +16,10 @@ import com.andywang.ulife.entity.calendar.views.MonthView;
 import com.andywang.ulife.entity.calendar.views.WeekView;
 import com.andywang.ulife.view.MyTextView;
 
-
+/**
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
+ */
 public class ScrollLayout extends FrameLayout implements MonthView.OnLineCountChangeListener,
         MonthView.OnLineChooseListener, MonthView.OnMonthViewChangeListener,
         WeekView.OnWeekViewChangeListener, WeekView.OnWeekDateClick, MonthView.OnMonthDateClick {

@@ -1,5 +1,6 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <string name="app_name">ULife</string>
+
     <string name="monday">一</string>
     <string name="tuseday">二</string>
     <string name="wednesday">三</string>
@@ -10,4 +11,145 @@
     <string name="hot_news">热点事件</string>
     <string name="kou_hao">标新 ，立异</string>
     <string name="advertisement">新一代梅赛德斯</string>
+
+    <!-- 横向导航条菜单项名称-->
+    <string-array name="news_type">
+        <item>头条</item>
+        <item>社会</item>
+        <item>国内</item>
+        <item>国际</item>
+        <item>娱乐</item>
+        <item>体育</item>
+        <item>军事</item>
+        <item>科技</item>
+        <item>财经</item>
+        <item>时尚</item>
+    </string-array>
+
+    <!-- 新闻类型http请求参数-->
+    <string-array name="news_type_request_param">
+        <item>top</item>
+        <item>shehui</item>
+        <item>guonei</item>
+        <item>guoji</item>
+        <item>yule</item>
+        <item>tiyu</item>
+        <item>junshi</item>
+        <item>keji</item>
+        <item>caijing</item>
+        <item>shishang</item>
+    </string-array>
+
+
+    <string name="title_name">@string/news</string>
+
+    <!-- 左侧侧滑菜单项标题内容-->
+    <string name="news">新闻</string>
+    <string name="weichat">精选</string>
+    <string name="funny">段子</string>
+    <string name="collection">收藏</string>
+    <string name="night">夜间</string>
+    <string name="about">关于</string>
+    <string name="feedback">反馈</string>
+    <string name="left_menu_bottom_settings">设置</string>
+    <string name="left_menu_bottom_exit">退出</string>
+
+    <string name="left_menu_login_name">andyWang</string>
+    <string name="left_menu_login_mailbox">393656489@qq.com</string>
+
+
+    <!-- 设置界面的项目名和key-->
+    <string name="preference">偏好</string>
+    <string name="internet">网络</string>
+    <string name="language">语言</string>
+    <string name="font_size">字体</string>
+    <string name="theme_change">主题换肤</string>
+    <string name="night_mode">夜间模式</string>
+    <string name="is_night_mode">当前处于夜间模式</string>
+    <string name="is_light_mode">当前处于白天模式</string>
+    <string name="exit_be_sure">退出确认</string>
+    <string name="exit_by_press_twice">按两次退出</string>
+    <string name="exit_dir">直接退出</string>
+    <string name="no_pic_mode">无图模式</string>
+    <string name="only_load_pic_wifi_useful">仅在Wifi下加载图片</string>
+    <string name="load_pic_net_useful">有网络下加载图片</string>
+    <string name="clear_all_cache">清除所有缓存</string>
+    <string name="reset_all_preference">重置所有设置</string>
+
+    <string-array name="language_title">
+        <item>简体中文</item>
+        <item>English</item>
+    </string-array>
+    <string-array name="language_key">
+        <item>zh</item>
+        <item>en</item>
+    </string-array>
+    <string-array name="font_size_title">
+        <item>小</item>
+        <item>中</item>
+        <item>大</item>
+    </string-array>
+    <string-array name="font_size_key">
+        <item>small</item>
+        <item>normal</item>
+        <item>big</item>
+    </string-array>
+    <string-array name="theme_title">
+        <item>红色</item>
+        <item>蓝色</item>
+        <item>绿色</item>
+        <item>紫色</item>
+        <item>黑色</item>
+    </string-array>
+    <string-array name="theme_key">
+        <item>red</item>
+        <item>blue</item>
+        <item>green</item>
+        <item>purple</item>
+        <item>black</item>
+    </string-array>
+    <string name="tip">提示</string>
+    <string name="tip_content">确定要清除所有缓存吗?</string>
+    <string name="certain">确定</string>
+    <string name="cancel">取消</string>
+
+    <string name="press_again">再按一次退出</string>
+
+    <string name="clearing">正在清除</string>
+    <string name="clear_success">清除成功!</string>
+    <string name="clear_failed">清除失败</string>
+
+    <string name="warning">警告</string>
+    <string name="init_settings_msg">是否要重置所有的设置?</string>
+
+    <!--网络数据加载错误时显示的内容 -->
+    <string name="reload">重新加载</string>
+    <string name="empty">什么都没有</string>
+
+    <string name="author">作者</string>
+    <string name="copyright">版权</string>
+    <string name="application_brief">应用简介</string>
+    <string name="current_version">当前版本</string>
+    <string name="share">分享</string>
+    <string name="author_github">作者 GitHub</string>
+    <string name="github">https://github.com/ULife</string>
+    <string name="mailbox">邮箱</string>
+    <string name="mailbox_summary">393656489@qq.com</string>
+    <string name="data">数据</string>
+    <string name="data_summary">所有数据图片来源于网络,版权属于原作者</string>
+    <string name="note">注意</string>
+    <string name="note_summary">该应用禁止用于商业目的</string>
+    <string name="license">license</string>
+    <string name="license_summary"></string>
+
+    <string name="message_clipboard">信息已经复制到剪切板</string>
+    <string name="is_collected">已收藏</string>
+    <string name="cancel_collected">取消收藏</string>
+
+    <string name="loading">正在加载...</string>
+
+    <string name="share_content">
+        欢迎使用趣闻,该应用新闻有丰富的种类，微信的精选内容，以及有趣的段子使你捧腹大笑，并且有强大的个性化设置功能。
+    </string>
+
 </resources>

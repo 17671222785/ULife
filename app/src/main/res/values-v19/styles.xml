@@ -1,0 +1,86 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="DayTheme_red" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/title_bc_red_dark</item>
+        <item name="colorAccent">@color/title_bc_red</item>
+        <item name="title_theme">@color/title_bc_red</item>
+        <item name="theme_textColor">@color/black_font</item>
+        <item name="theme_backgroundColor">@color/white</item>
+        <item name="theme_leftMenu_bottom_style">@drawable/left_menu_bottom_button_bc_state</item>
+    </style>
+
+    <style name="DayTheme_blue" parent="AppTheme">
+        <item name="title_theme">@color/title_bc_blue</item>
+        <item name="colorAccent">@color/title_bc_blue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="theme_textColor">@color/black_font</item>
+        <item name="theme_backgroundColor">@color/white</item>
+        <item name="theme_leftMenu_bottom_style">@drawable/left_menu_bottom_button_bc_state</item>
+    </style>
+
+    <style name="DayTheme_green" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/title_bc_green_dark</item>
+        <item name="title_theme">@color/title_bc_green</item>
+        <item name="colorAccent">@color/title_bc_green</item>
+        <item name="theme_textColor">@color/black_font</item>
+        <item name="theme_backgroundColor">@color/white</item>
+        <item name="theme_leftMenu_bottom_style">@drawable/left_menu_bottom_button_bc_state</item>
+    </style>
+
+    <style name="DayTheme_purple" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/title_bc_purple_dark</item>
+        <item name="title_theme">@color/title_bc_purple</item>
+        <item name="colorAccent">@color/title_bc_purple</item>
+        <item name="theme_textColor">@color/black_font</item>
+        <item name="theme_backgroundColor">@color/white</item>
+        <item name="theme_leftMenu_bottom_style">@drawable/left_menu_bottom_button_bc_state</item>
+    </style>
+
+    <style name="DayTheme_black" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/nightColorPrimaryDark</item>
+        <item name="title_theme">@color/nightColorPrimary</item>
+        <item name="colorAccent">@color/nightColorPrimary</item>
+        <item name="theme_textColor">@color/black_font</item>
+        <item name="theme_backgroundColor">@color/white</item>
+        <item name="theme_leftMenu_bottom_style">@drawable/left_menu_bottom_button_bc_state</item>
+    </style>
+
+    <style name="NightTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/nightColorPrimary</item>
+        <item name="colorPrimaryDark">@color/nightColorPrimary</item>
+        <item name="title_theme">@color/nightTitleBackgroundColor</item>
+        <item name="colorAccent">@color/title_bc_blue</item>
+        <item name="theme_textColor">@color/gray</item>
+        <item name="theme_backgroundColor">@color/nightColorPrimary</item>
+        <item name="theme_leftMenu_bottom_style">@drawable/left_menu_bottom_button_bc_state_night
+        </item>
+    </style>
+
+    <!-- 左侧侧滑菜单底部的按钮风格-->
+    <style name="left_bottom_button_style">
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- 导航字体的大小和颜色-->
+    <style name="navigation_item_front_state_style">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/navigation_item_font_state_color_day</item>
+    </style>
+
+    <style name="navigation_item_front_state_style_night">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/navigation_item_font_state_color_night</item>
+    </style>
+
+</resources>

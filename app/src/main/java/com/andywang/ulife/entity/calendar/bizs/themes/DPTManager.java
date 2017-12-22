@@ -7,7 +7,8 @@ package com.andywang.ulife.entity.calendar.bizs.themes;
  * DatePicker theme manager
  * Call {@link #initCalendar(DPTheme)} method to initialization a theme before DatePicker instance
  *
- * @author AigeStudio 2015-06-30
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
  */
 public final class DPTManager {
     private static DPTManager sManager;

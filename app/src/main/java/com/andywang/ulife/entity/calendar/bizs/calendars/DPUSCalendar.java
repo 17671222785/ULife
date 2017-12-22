@@ -11,7 +11,8 @@ import java.util.Set;
  *
  * Calendar of America
  *
- * @author AigeStudio 2015-07-22
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
  */
 public class DPUSCalendar extends DPCalendar {
     private static final String[][] FESTIVAL_G = {

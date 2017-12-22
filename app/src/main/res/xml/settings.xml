@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pre="http://schemas.android.com/apk/res/com.andywang.ulife">
+
+    <PreferenceCategory
+        android:layout="@layout/preference_category_widget"
+        android:title="@string/preference">
+        <ListPreference
+            android:defaultValue="zh"
+            android:entries="@array/language_title"
+            android:entryValues="@array/language_key"
+            android:key="language"
+            android:layout="@layout/preference_item"
+            android:title="@string/language" />
+        <ListPreference
+            android:defaultValue="small"
+            android:entries="@array/font_size_title"
+            android:entryValues="@array/font_size_key"
+            android:key="font_size"
+            android:layout="@layout/preference_item"
+            android:title="@string/font_size" />
+        <ListPreference
+            android:defaultValue="red"
+            android:entries="@array/theme_title"
+            android:entryValues="@array/theme_key"
+            android:key="change_theme"
+            android:layout="@layout/preference_item"
+            android:title="@string/theme_change" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="is_night"
+            android:layout="@layout/preference_item"
+            android:summaryOff="@string/is_light_mode"
+            android:summaryOn="@string/is_night_mode"
+            android:title="@string/night_mode" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="back_by_twice"
+            android:layout="@layout/preference_item"
+            android:summaryOff="@string/exit_dir"
+            android:summaryOn="@string/exit_by_press_twice"
+            android:title="@string/exit_be_sure" />
+        <Preference
+            android:key="reset"
+            android:layout="@layout/preference_item"
+            android:title="@string/reset_all_preference" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preference_category_widget"
+        android:title="@string/internet">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="no_picture"
+            android:layout="@layout/preference_item"
+            android:summaryOff="@string/load_pic_net_useful"
+            android:summaryOn="@string/only_load_pic_wifi_useful"
+            android:title="@string/no_pic_mode" />
+        <com.example.parting_soul.news.customview.PreferenceWithTip
+            android:key="clean_all_cache"
+            android:layout="@layout/preference_item"
+            pre:pretip="0B"
+            pre:pretitle="@string/clear_all_cache" />
+        <Preference
+            android:key="about"
+            android:layout="@layout/preference_item"
+            android:title="@string/about" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

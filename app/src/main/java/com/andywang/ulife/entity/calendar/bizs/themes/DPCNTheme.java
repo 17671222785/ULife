@@ -7,7 +7,8 @@ package com.andywang.ulife.entity.calendar.bizs.themes;
  * Theme of china
  * You don't need this class for other countries
  *
- * @author AigeStudio 2015-06-17
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
  */
 public class DPCNTheme extends DPBaseTheme {
     /**

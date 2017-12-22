@@ -2,6 +2,10 @@ package com.andywang.ulife.gson;
 
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
+ */
 public class Forecast {
 
     public String date;

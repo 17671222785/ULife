@@ -52,6 +52,9 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.2'
     //Glide用于加载和显示图片
     implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile 'com.yalantis:phoenix:1.2.3'
     //轮播图
     //implementation 'com.youth.banner:banner:1.4.10'
 }

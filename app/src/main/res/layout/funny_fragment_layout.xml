@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.yalantis.phoenix.PullToRefreshView
+        android:id="@+id/pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--  <com.example.parting_soul.news.customview.LoadMoreItemListView
+              android:id="@+id/list_view"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="?attr/theme_backgroundColor"
+              android:minHeight="60dp"
+              android:dividerHeight="15dp"/> -->
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/theme_backgroundColor"
+            android:dividerHeight="15dp"
+            android:descendantFocusability="beforeDescendants"
+            android:minHeight="60dp" />
+    </com.yalantis.phoenix.PullToRefreshView>
+</LinearLayout>

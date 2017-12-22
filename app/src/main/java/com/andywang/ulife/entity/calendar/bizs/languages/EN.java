@@ -7,7 +7,8 @@ package com.andywang.ulife.entity.calendar.bizs.languages;
  * The implementation class of english.
  * You can refer to Language{@link DPLManager} if you want to define more language.
  *
- * @author AigeStudio 2015-03-28
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
  */
 public class EN extends DPLManager {
     @Override

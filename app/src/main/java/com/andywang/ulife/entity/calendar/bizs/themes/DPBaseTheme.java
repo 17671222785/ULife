@@ -5,7 +5,8 @@ package com.andywang.ulife.entity.calendar.bizs.themes;
  * 
  * The default implement of theme
  *
- * @author AigeStudio 2015-06-17
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
  */
 public class DPBaseTheme extends DPTheme {
     @Override

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:layout="@layout/preference_category_widget"
+        android:title="@string/app_name">
+        <Preference
+            android:key="application_brief"
+            android:layout="@layout/preference_item"
+            android:title="@string/application_brief" />
+        <Preference
+            android:key="current_version"
+            android:layout="@layout/preference_item"
+            android:title="@string/current_version" />
+        <Preference
+            android:key="share"
+            android:layout="@layout/preference_item"
+            android:title="@string/share" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_category_widget"
+        android:title="@string/author">
+        <Preference
+            android:key="author_github"
+            android:layout="@layout/preference_item"
+            android:summary="@string/github"
+            android:title="@string/author_github" />
+        <Preference
+            android:key="mailbox"
+            android:layout="@layout/preference_item"
+            android:summary="@string/mailbox_summary"
+            android:title="@string/mailbox" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_category_widget"
+        android:title="@string/copyright">
+        <Preference
+            android:key="data"
+            android:layout="@layout/preference_item"
+            android:summary="@string/data_summary"
+            android:title="@string/data" />
+        <Preference
+            android:key="note"
+            android:layout="@layout/preference_item"
+            android:summary="@string/note_summary"
+            android:title="@string/note" />
+        <!--<Preference
+            android:key="license"
+            android:layout="@layout/preference_item"
+            android:summary="@string/license_summary"
+            android:title="@string/license" />-->
+    </PreferenceCategory>
+</PreferenceScreen>

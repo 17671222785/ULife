@@ -7,7 +7,10 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 
-
+/**
+ * Created by andyWang on 2017/11/29 0029.
+ * 邮箱：393656489@qq.com
+ */
 public class MyTextView extends android.support.v7.widget.AppCompatTextView {
 
     private Paint mPaint;
