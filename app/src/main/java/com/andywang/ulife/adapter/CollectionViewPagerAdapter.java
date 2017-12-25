@@ -4,8 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.andywang.ulife.util.support.NewsApplication;
 import com.andywang.ulife.view.fragment.collection.CollectionFragment;
+
+import org.litepal.LitePalApplication;
 
 import java.util.List;
 
@@ -38,6 +39,6 @@ public class CollectionViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return NewsApplication.getContext().getString(CollectionFragment.TITLES[position]);
+        return LitePalApplication.getContext().getString(CollectionFragment.TITLES[position]);
     }
 }

@@ -17,7 +17,7 @@
     <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <item name="android:actionMenuTextColor">@android:color/white</item>
         <item name="android:textColorPrimary">#007AFF</item>
-        <item name="android:navigationIcon">@drawable/ic_top_back</item>
+        <item name="android:navigationIcon">@android:color/white</item>
     </style>
 
     <style name="rbstyle">

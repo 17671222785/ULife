@@ -1,5 +1,6 @@
 package com.andywang.ulife.ui;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -32,7 +33,8 @@ import com.andywang.ulife.util.style.ThemeChangeManager;
 import com.andywang.ulife.util.support.CollectionCheckStateManager;
 import com.andywang.ulife.util.support.CommonInfo;
 import com.andywang.ulife.util.support.LogUtils;
-import com.andywang.ulife.util.support.NewsApplication;
+
+import org.litepal.LitePalApplication;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
@@ -114,6 +116,7 @@ public class MessageActivity extends AppCompatActivity implements View.OnClickLi
 
     private static int from_where_activity;
 
+    @SuppressLint("HandlerLeak")
     private static Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -129,7 +132,7 @@ public class MessageActivity extends AppCompatActivity implements View.OnClickLi
 
         private void judgeResult(Message msg, int is_collected) {
             if ((Boolean) (msg.obj)) {
-                Toast.makeText(NewsApplication.getContext(), is_collected, Toast.LENGTH_SHORT).show();
+                Toast.makeText(LitePalApplication.getContext(), is_collected, Toast.LENGTH_SHORT).show();
                 //若是从CollectionActivity则通知其更新
                 if (from_where_activity == FROM_COLLECTIONFRAGMENT) {
                     mCalllBackManager.getNotifyCollectionActivityCallBack().collectedStateChange(mIsCollected.isChecked());
@@ -152,16 +155,16 @@ public class MessageActivity extends AppCompatActivity implements View.OnClickLi
         ThemeChangeManager.changeThemeMode(this);
         LanguageChangeManager.changeLanguage();
         setContentView(R.layout.activity_message);
-        mNotificationHead = (LinearLayout) findViewById(R.id.notify);
+        mNotificationHead = findViewById(R.id.notify);
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT) {
             mNotificationHead.setVisibility(View.VISIBLE);
         }
-        mTitleView = (TextView) findViewById(R.id.title_name);
+        mTitleView = findViewById(R.id.title_name);
         changeTitle();
-        mBackView = (ImageButton) findViewById(R.id.back_forward);
+        mBackView = findViewById(R.id.back_forward);
         mBackView.setOnClickListener(this);
-        mIsCollected = (CheckBox) findViewById(R.id.is_collectedBox);
-        mWebView = (WebView) findViewById(R.id.webView);
+        mIsCollected = findViewById(R.id.is_collectedBox);
+        mWebView = findViewById(R.id.webView);
         mIsCollected.setOnCheckedChangeListener(this);
 
         Intent result = getIntent();

@@ -17,6 +17,7 @@ import com.andywang.ulife.adapter.JokeFragmentAdapter;
 import com.andywang.ulife.callback.CollectionCallBack;
 import com.andywang.ulife.customview.LoadingPager;
 import com.andywang.ulife.entity.calendar.bean.Joke;
+import com.andywang.ulife.ui.MainActivity;
 import com.andywang.ulife.util.cache.database.CollectionJokeThread;
 import com.andywang.ulife.util.cache.database.DBManager;
 import com.andywang.ulife.util.network.HttpUtils;
@@ -25,7 +26,6 @@ import com.andywang.ulife.util.network.NetworkInfo;
 import com.andywang.ulife.util.support.CommonInfo;
 import com.andywang.ulife.util.support.ListSerializableUtils;
 import com.andywang.ulife.util.support.LogUtils;
-import com.andywang.ulife.view.NewsFragment;
 import com.andywang.ulife.view.fragment.support.BaseFragment;
 import com.yalantis.phoenix.PullToRefreshView;
 
@@ -40,7 +40,7 @@ import java.util.Set;
 
 public class JokeFragment extends BaseFragment<Joke> implements PullToRefreshView.OnRefreshListener,
         AbsListView.OnScrollListener, AdapterView.OnItemClickListener, JokeFragmentAdapter.JokeCollectionCallBack
-        , CollectionCallBack<Joke>, NewsFragment.titleName {
+        , CollectionCallBack<Joke>{
     public static final String NAME = "JokeFragment";
 
     private JokeFragmentAdapter mJokeFragmentAdapter;
@@ -76,6 +76,7 @@ public class JokeFragment extends BaseFragment<Joke> implements PullToRefreshVie
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ((MainActivity) getActivity()).setTitleName(R.string.funny);
         mDBManager = DBManager.getDBManager(getActivity());
         mSets = new HashSet<LoadDataAsync>();
         mCollectionJokeThread = new CollectionJokeThread();
@@ -245,11 +246,6 @@ public class JokeFragment extends BaseFragment<Joke> implements PullToRefreshVie
         if (!isSuccess) {
             mCurrentCheckBox.setChecked(!checkBoxState);
         }
-    }
-
-    @Override
-    public void setTitleName(int resId) {
-        setTitleName(R.string.funny);
     }
 
     class LoadDataAsync extends AsyncTask<Void, Void, List<Joke>> {

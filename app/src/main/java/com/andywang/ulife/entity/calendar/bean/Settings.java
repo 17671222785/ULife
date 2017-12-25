@@ -3,12 +3,12 @@ package com.andywang.ulife.entity.calendar.bean;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.andywang.ulife.util.support.NewsApplication;
+import org.litepal.LitePalApplication;
 
 
 /**
  * Created by parting_soul on 2016/10/18.
- * 存放Setings的所有Key
+ * 存放Settings的所有Key
  */
 
 public class Settings {
@@ -101,7 +101,7 @@ public class Settings {
      */
     public static Settings newsInstance() {
         if (mSettings == null) {
-            mSettings = new Settings(NewsApplication.getContext());
+            mSettings = new Settings(LitePalApplication.getContext());
         }
         return mSettings;
     }

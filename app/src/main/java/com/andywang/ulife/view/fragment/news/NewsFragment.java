@@ -17,11 +17,11 @@ import com.andywang.ulife.adapter.NewsPageFragmentAdapter;
 import com.andywang.ulife.customview.HorizontalNavigation;
 import com.andywang.ulife.entity.calendar.bean.NewsKinds;
 import com.andywang.ulife.entity.calendar.bean.Settings;
+import com.andywang.ulife.ui.MainActivity;
 import com.andywang.ulife.util.style.FontChangeManager;
 import com.andywang.ulife.util.style.ThemeChangeManager;
 import com.andywang.ulife.util.support.CommonInfo;
 import com.andywang.ulife.util.support.WindowSizeTool;
-import com.andywang.ulife.view.NewsFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +30,7 @@ import java.util.List;
  * Created by parting_soul on 2016/11/1.
  */
 
-public class NewFragment extends Fragment implements ViewPager.OnPageChangeListener, NewsFragment.titleName {
+public class NewsFragment extends Fragment implements ViewPager.OnPageChangeListener{
     public static final String NAME = "newsfragment";
 
     /**
@@ -83,6 +83,7 @@ public class NewFragment extends Fragment implements ViewPager.OnPageChangeListe
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ((MainActivity) getActivity()).setTitleName(R.string.news);
     }
 
     @Nullable
@@ -227,8 +228,4 @@ public class NewFragment extends Fragment implements ViewPager.OnPageChangeListe
 
     }
 
-    @Override
-    public void setTitleName(int resId) {
-        setTitleName(R.string.news);
-    }
 }

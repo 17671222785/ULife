@@ -4,7 +4,8 @@ import android.content.Context;
 
 import com.andywang.ulife.R;
 import com.andywang.ulife.entity.calendar.bean.Settings;
-import com.andywang.ulife.util.support.NewsApplication;
+
+import org.litepal.LitePalApplication;
 
 /**
  * Created by parting_soul on 2016/10/28.
@@ -12,7 +13,7 @@ import com.andywang.ulife.util.support.NewsApplication;
  */
 
 public class FontChangeManager {
-    public static Context mContext = NewsApplication.getContext();
+    public static Context mContext = LitePalApplication.getContext();
 
     public static final String[] fontSizeKey = mContext.getResources().getStringArray(R.array.font_size_key);
 

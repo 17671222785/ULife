@@ -3,7 +3,7 @@ package com.andywang.ulife.util.network;
 import android.content.Context;
 import android.net.ConnectivityManager;
 
-import com.andywang.ulife.util.support.NewsApplication;
+import org.litepal.LitePalApplication;
 
 
 /**
@@ -17,7 +17,7 @@ public class NetworkInfo {
      * @return true 表示网络可用
      */
     public static boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager = (ConnectivityManager) NewsApplication.getContext().
+        ConnectivityManager connectivityManager = (ConnectivityManager) LitePalApplication.getContext().
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         android.net.NetworkInfo info = connectivityManager.getActiveNetworkInfo();
         if (info != null && info.isConnected()) {
@@ -34,7 +34,7 @@ public class NetworkInfo {
      * @return boolean
      */
     public static boolean isWifiAvailable() {
-        ConnectivityManager connectivityManager = (ConnectivityManager) NewsApplication.getContext().
+        ConnectivityManager connectivityManager = (ConnectivityManager) LitePalApplication.getContext().
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         android.net.NetworkInfo info = connectivityManager.getActiveNetworkInfo();
         if (info != null && info.getType() == ConnectivityManager.TYPE_WIFI) {

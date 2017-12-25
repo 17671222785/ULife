@@ -13,6 +13,7 @@ import com.andywang.ulife.callback.CollectionCheckStateNotifiyCallBack;
 import com.andywang.ulife.customview.LoadMoreItemListView;
 import com.andywang.ulife.customview.LoadingPager;
 import com.andywang.ulife.entity.calendar.bean.WeiChat;
+import com.andywang.ulife.ui.MainActivity;
 import com.andywang.ulife.ui.MessageActivity;
 import com.andywang.ulife.util.cache.database.DBManager;
 import com.andywang.ulife.util.network.HttpUtils;
@@ -21,7 +22,6 @@ import com.andywang.ulife.util.support.CollectionCheckStateManager;
 import com.andywang.ulife.util.support.CommonInfo;
 import com.andywang.ulife.util.support.ListSerializableUtils;
 import com.andywang.ulife.util.support.LogUtils;
-import com.andywang.ulife.view.NewsFragment;
 import com.andywang.ulife.view.fragment.support.BaseFragment;
 import com.yalantis.phoenix.PullToRefreshView;
 
@@ -34,8 +34,7 @@ import static com.andywang.ulife.util.network.HttpUtils.HttpPostMethod;
  */
 
 public class WeiChatFragment extends BaseFragment<WeiChat> implements PullToRefreshView.OnRefreshListener
-        , LoadMoreItemListView.LoadMoreItemListener, AdapterView.OnItemClickListener, CollectionCheckStateNotifiyCallBack
-        , NewsFragment.titleName{
+        , LoadMoreItemListView.LoadMoreItemListener, AdapterView.OnItemClickListener, CollectionCheckStateNotifiyCallBack {
     public static final String NAME = "weichatfragment";
 
     private List<WeiChat> mLists;
@@ -65,6 +64,7 @@ public class WeiChatFragment extends BaseFragment<WeiChat> implements PullToRefr
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ((MainActivity) getActivity()).setTitleName(R.string.weichat);
         mParams = initRequestUrlParam();
         mDBManager = DBManager.getDBManager(getActivity());
         mCollectionCheckStateManager = CollectionCheckStateManager.newInstance();
@@ -86,8 +86,8 @@ public class WeiChatFragment extends BaseFragment<WeiChat> implements PullToRefr
     @Override
     public View createSuccessPage() {
         View view = View.inflate(getActivity(), R.layout.weichat_fragment_layout, null);
-        mListView = (LoadMoreItemListView) view.findViewById(R.id.list_view);
-        mPullToRefreshView = (PullToRefreshView) view.findViewById(R.id.pull_to_refresh);
+        mListView = view.findViewById(R.id.list_view);
+        mPullToRefreshView = view.findViewById(R.id.pull_to_refresh);
         mPullToRefreshView.setOnRefreshListener(this);
         mListView.setOnItemClickListener(this);
         LogUtils.d(CommonInfo.TAG, "--->111" + "createSuccess()");
@@ -161,12 +161,6 @@ public class WeiChatFragment extends BaseFragment<WeiChat> implements PullToRefr
         mCurrentSelectedWeiChat.setIs_collected(isChange);
         mWeiChatDetailFragmentAdapter.notifyDataSetChanged();
     }
-
-    @Override
-    public void setTitleName(int resId) {
-        setTitleName(R.string.weichat);
-    }
-
 
     class LoadDataAsync extends AsyncTask<Void, Void, List<WeiChat>> {
         /**

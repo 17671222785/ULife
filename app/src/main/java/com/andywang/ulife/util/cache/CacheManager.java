@@ -6,7 +6,8 @@ import com.andywang.ulife.util.cache.database.SQLiteDatabaseHelper;
 import com.andywang.ulife.util.image.ImageLoader;
 import com.andywang.ulife.util.support.CommonInfo;
 import com.andywang.ulife.util.support.LogUtils;
-import com.andywang.ulife.util.support.NewsApplication;
+
+import org.litepal.LitePalApplication;
 
 import java.text.DecimalFormat;
 
@@ -32,7 +33,7 @@ public class CacheManager {
      * @return String
      */
     public static String getCacheSize() {
-        ImageLoader loader = ImageLoader.newInstance(NewsApplication.getContext());
+        ImageLoader loader = ImageLoader.newInstance(LitePalApplication.getContext());
         long picSize = loader.getImageCacheSize();
         long dataSize = getDataBaseCacheSize();
         LogUtils.d(CommonInfo.TAG, "--->123 " + dataSize + "  " + picSize + " " + DATABASE_INIT_SIZE);
@@ -45,8 +46,8 @@ public class CacheManager {
      * @param callback
      */
     public static void clearAllCache(ClearCacheCallBack callback) {
-        ImageLoader loader = ImageLoader.newInstance(NewsApplication.getContext());
-        DBManager manager = DBManager.getDBManager(NewsApplication.getContext());
+        ImageLoader loader = ImageLoader.newInstance(LitePalApplication.getContext());
+        DBManager manager = DBManager.getDBManager(LitePalApplication.getContext());
         boolean isDataBaseClear = manager.deleteAllCacheFromDataBase();
         boolean isPicClear = loader.deleteImageCache();
         callback.finish(isDataBaseClear && isPicClear);
@@ -76,7 +77,7 @@ public class CacheManager {
      * @return
      */
     public static long getDataBaseCacheSize() {
-        return NewsApplication.getContext().getDatabasePath(SQLiteDatabaseHelper.DATABASE_NAME).length();
+        return LitePalApplication.getContext().getDatabasePath(SQLiteDatabaseHelper.DATABASE_NAME).length();
     }
 
 }

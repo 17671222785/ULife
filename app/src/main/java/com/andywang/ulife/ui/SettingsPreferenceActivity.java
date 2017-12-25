@@ -15,7 +15,6 @@ import com.andywang.ulife.R;
 import com.andywang.ulife.entity.calendar.bean.Settings;
 import com.andywang.ulife.util.style.LanguageChangeManager;
 import com.andywang.ulife.util.style.ThemeChangeManager;
-import com.andywang.ulife.view.NewsFragment;
 import com.andywang.ulife.view.fragment.settings.SettingsPreferenceFragment;
 
 /**
@@ -96,7 +95,7 @@ public class SettingsPreferenceActivity extends AppCompatActivity {
      */
     public void checkRefresh() {
         if (Settings.isRefresh) {
-            NewsFragment.refreshActivity(this);
+            MainActivity.refreshActivity(this);
             Settings.isRefresh = false;
         }
     }

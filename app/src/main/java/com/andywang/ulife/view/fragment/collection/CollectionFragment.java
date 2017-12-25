@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 import com.andywang.ulife.R;
 import com.andywang.ulife.adapter.CollectionViewPagerAdapter;
-import com.andywang.ulife.view.NewsFragment;
+import com.andywang.ulife.ui.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.List;
  * Created by parting_soul on 2016/11/7.
  */
 
-public class CollectionFragment extends Fragment implements NewsFragment.titleName{
+public class CollectionFragment extends Fragment{
     public static final String NAME = "CollectionFragment";
 
     private ViewPager mViewPager;
@@ -34,6 +34,7 @@ public class CollectionFragment extends Fragment implements NewsFragment.titleNa
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ((MainActivity) getActivity()).setTitleName(R.string.collection);
     }
 
     @Nullable
@@ -70,9 +71,4 @@ public class CollectionFragment extends Fragment implements NewsFragment.titleNa
         mTabLayout.setupWithViewPager(mViewPager);
     }
 
-
-    @Override
-    public void setTitleName(int resId) {
-        setTitleName(R.string.collection);
-    }
 }

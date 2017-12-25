@@ -7,7 +7,8 @@ import com.andywang.ulife.R;
 import com.andywang.ulife.entity.calendar.bean.Settings;
 import com.andywang.ulife.util.support.CommonInfo;
 import com.andywang.ulife.util.support.LogUtils;
-import com.andywang.ulife.util.support.NewsApplication;
+
+import org.litepal.LitePalApplication;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,7 +29,7 @@ public class ThemeChangeManager {
 
     public static Map<String, Color> map;
 
-    public static Context mContext = NewsApplication.getContext();
+    public static Context mContext = LitePalApplication.getContext();
 
     public static String[] colorKeys = mContext.getResources().getStringArray(R.array.theme_key);
 

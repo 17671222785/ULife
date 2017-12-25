@@ -1,7 +1,8 @@
 package com.andywang.ulife.entity.calendar.bean;
 
 import com.andywang.ulife.R;
-import com.andywang.ulife.util.support.NewsApplication;
+
+import org.litepal.LitePalApplication;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,7 +20,7 @@ public class NewsKinds {
      * @return String[]
      */
     public static String[] getNewsTypes() {
-        return NewsApplication.getContext().getResources().getStringArray(R.array.news_type);
+        return LitePalApplication.getContext().getResources().getStringArray(R.array.news_type);
     }
 
     /**
@@ -28,7 +29,7 @@ public class NewsKinds {
      * @return String[]
      */
     public static String[] getNewsTypeResquestParams() {
-        return NewsApplication.getContext().getResources().getStringArray(R.array.news_type_request_param);
+        return LitePalApplication.getContext().getResources().getStringArray(R.array.news_type_request_param);
     }
 
     /**

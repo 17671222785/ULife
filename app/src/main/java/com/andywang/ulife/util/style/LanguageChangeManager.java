@@ -5,7 +5,8 @@ import android.content.res.Configuration;
 
 import com.andywang.ulife.R;
 import com.andywang.ulife.entity.calendar.bean.Settings;
-import com.andywang.ulife.util.support.NewsApplication;
+
+import org.litepal.LitePalApplication;
 
 import java.util.Locale;
 
@@ -14,18 +15,18 @@ import java.util.Locale;
  */
 
 public class LanguageChangeManager {
-    public static Context mContext = NewsApplication.getContext();
+    public static Context mContext = LitePalApplication.getContext();
 
     public static String[] languageKeys = mContext.getResources().getStringArray(R.array.language_key);
 
     public static void changeLanguage() {
         String key = Settings.newsInstance().getString(Settings.LANUAGE_KEY, "");
-        Configuration confi = mContext.getResources().getConfiguration();
+        Configuration config = mContext.getResources().getConfiguration();
         if (key.equals("zh")) {
-            confi.locale = Locale.SIMPLIFIED_CHINESE;
+            config.locale = Locale.SIMPLIFIED_CHINESE;
         } else if (key.equals("en")) {
-            confi.locale = Locale.ENGLISH;
+            config.locale = Locale.ENGLISH;
         }
-        mContext.getResources().updateConfiguration(confi, mContext.getResources().getDisplayMetrics());
+        mContext.getResources().updateConfiguration(config, mContext.getResources().getDisplayMetrics());
     }
 }

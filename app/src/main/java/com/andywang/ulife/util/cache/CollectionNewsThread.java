@@ -7,7 +7,8 @@ import com.andywang.ulife.entity.calendar.bean.News;
 import com.andywang.ulife.util.cache.database.DBManager;
 import com.andywang.ulife.util.support.CommonInfo;
 import com.andywang.ulife.util.support.LogUtils;
-import com.andywang.ulife.util.support.NewsApplication;
+
+import org.litepal.LitePalApplication;
 
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class CollectionNewsThread {
     private Context mContext;
 
     public CollectionNewsThread() {
-        mContext = NewsApplication.getContext();
+        mContext = LitePalApplication.getContext();
     }
 
     public void getCollectionNews(final CollectionCallBack<News> callBack) {

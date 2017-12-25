@@ -24,7 +24,8 @@ import java.util.List;
  * Created by parting_soul on 2016/11/7.
  */
 
-public class JokeCollectionFragment extends CollectionBaseFragment<Joke> implements JokeFragmentAdapter.JokeCollectionCallBack {
+public class JokeCollectionFragment extends CollectionBaseFragment<Joke> implements
+                        JokeFragmentAdapter.JokeCollectionCallBack {
 
     private JokeFragmentAdapter mJokeFragmentAdapter;
 
